@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4BCBF47B-DC0D-4BBC-A7DF-67C4483B9863}</ProjectGuid>
+    <ProjectGuid>{F23086E5-63D1-46A2-AF84-1DB0B3809694}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StringlyTyped.Tests</RootNamespace>
-    <AssemblyName>StringlyTyped.Tests</AssemblyName>
+    <RootNamespace>Stringly.Typed.SemVer</RootNamespace>
+    <AssemblyName>Stringly.Typed.SemVer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\..\src\Stringly.Typed\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,24 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Samples.cs" />
-    <Compile Include="SimpleStringCustomTypeTest.cs" />
-    <Compile Include="Types\SemVerTests.cs" />
-    <Compile Include="TypeWithoutTryParseMethodTests.cs" />
-    <Compile Include="TypeWithTryParseMethodTests.cs" />
+    <Compile Include="SemVer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StandardTypesTests.cs" />
-    <Compile Include="ComplexTypeBasedOnRegexTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Stringly.Typed.SemVer\Stringly.Typed.SemVer.csproj">
-      <Project>{F23086E5-63D1-46A2-AF84-1DB0B3809694}</Project>
-      <Name>Stringly.Typed.SemVer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Stringly.Typed\Stringly.Typed.csproj">
+    <ProjectReference Include="..\Stringly.Typed\Stringly.Typed.csproj">
       <Project>{C768C136-DDC5-4521-B44C-A299A0EC802E}</Project>
       <Name>Stringly.Typed</Name>
     </ProjectReference>
